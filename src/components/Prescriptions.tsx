@@ -1,9 +1,9 @@
-import { useState, useEffect } from 'react';
-import { Plus, Trash2, Save, Printer, Send, Mic, MicOff, Star, FileText } from 'lucide-react';
-import { Input } from './ui/input';
+import { useState } from 'react';
+import { Plus, Download, Printer, Eye, Save, Send, Trash2, Star, FileText, Mic, MicOff } from 'lucide-react';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from './ui/dialog';
 import { Label } from './ui/label';
 import { Textarea } from './ui/textarea';
-import logo from 'figma:asset/e69f99b7f89c8400a7a65b1e073263c7642e5570.png';
+import { Input } from './ui/input';
 import { toast } from 'sonner@2.0.3';
 
 interface Medicine {
@@ -543,7 +543,7 @@ export function Prescriptions() {
           <p className="text-gray-600 mt-1 text-sm md:text-base">Generate prescription for your patient</p>
         </div>
         <div className="hidden md:block">
-          <img src={logo} alt="SehatNxt+" className="h-16 w-auto opacity-50" />
+          <img src="/logo.png" alt="SehatNxt+" className="h-16 w-auto opacity-50" />
         </div>
       </div>
 
@@ -901,7 +901,7 @@ export function Prescriptions() {
             <h2 className="text-gray-900 mb-4">Prescription Preview</h2>
             <div className="p-4 md:p-6 bg-gray-50 rounded-xl min-h-[600px] md:min-h-[800px]">
               <div className="text-center mb-6 pb-6 border-b-2 border-gray-300">
-                <img src={logo} alt="SehatNxt+" className="h-20 w-auto mx-auto mb-3" />
+                <img src="/logo.png" alt="SehatNxt+" className="h-20 w-auto mx-auto mb-3" />
                 <h3 className="text-lg font-semibold text-gray-900 mb-1">Dr. Sharma, MBBS, MD</h3>
                 <p className="text-xs text-gray-500">Reg. No: 12345</p>
                 <p className="text-xs text-gray-500">Sharma Clinic, MG Road, Mumbai</p>

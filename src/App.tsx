@@ -92,7 +92,7 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-[#F8FAFC]">
+    <div className="min-h-screen bg-gradient-to-br from-[#E3F2FD] via-[#E8F5F3] to-[#E0F2F1]">
       {/* Desktop Sidebar */}
       <div className="hidden lg:block">
         <Sidebar currentPage={currentPage} onNavigate={handleNavigate} />

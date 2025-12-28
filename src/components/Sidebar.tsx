@@ -1,5 +1,4 @@
 import { Home, Calendar, Users, FileText, TrendingUp, Settings, LogOut, MessageCircle, X, Award, Gift, Download } from 'lucide-react';
-import logo from 'figma:asset/e69f99b7f89c8400a7a65b1e073263c7642e5570.png';
 import { toast } from 'sonner@2.0.3';
 import { Sheet, SheetContent, SheetTitle, SheetDescription } from './ui/sheet';
 
@@ -46,7 +45,7 @@ export function Sidebar({ currentPage, onNavigate, isMobile = false, isOpen = fa
       {isMobile && (
         <div className="p-4 border-b border-gray-200 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <img src={logo} alt="SehatNxt+" className="h-10 w-auto" />
+            <img src="/logo.png" alt="SehatNxt+" className="h-10 w-auto" />
           </div>
           <button onClick={onClose} className="p-2 hover:bg-gray-100 rounded-lg transition-colors">
             <X className="w-5 h-5 text-gray-600" strokeWidth={2} />
@@ -58,7 +57,7 @@ export function Sidebar({ currentPage, onNavigate, isMobile = false, isOpen = fa
       {!isMobile && (
         <div className="p-6 border-b border-gray-200 bg-gradient-to-br from-blue-50 to-teal-50">
           <div className="flex items-center justify-center mb-2">
-            <img src={logo} alt="SehatNxt+" className="h-40 w-auto" />
+            <img src="/logo.png" alt="SehatNxt+" className="h-40 w-auto" />
           </div>
           <p className="text-xs text-gray-600 text-center mt-2">Clinic Management Platform</p>
         </div>

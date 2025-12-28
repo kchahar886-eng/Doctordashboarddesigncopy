@@ -3,7 +3,6 @@ import { CheckCircle2, ArrowRight, User, Building2, DollarSign, Calendar } from 
 import { Input } from './ui/input';
 import { Label } from './ui/label';
 import { Textarea } from './ui/textarea';
-import logo from 'figma:asset/e69f99b7f89c8400a7a65b1e073263c7642e5570.png';
 import { motion } from 'motion/react';
 
 interface OnboardingProps {
@@ -77,7 +76,7 @@ export function Onboarding({ onComplete }: OnboardingProps) {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-teal-50 flex items-center justify-center p-4 md:p-6">
+    <div className="min-h-screen bg-gradient-to-br from-[#E3F2FD] via-[#E8F5F3] to-[#E0F2F1] flex items-center justify-center p-4 md:p-6">
       {/* Animated Background Shapes */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
@@ -126,7 +125,7 @@ export function Onboarding({ onComplete }: OnboardingProps) {
           className="text-center mb-6 md:mb-8"
         >
           <div className="flex justify-center mb-3 md:mb-4">
-            <img src={logo} alt="SehatNxt+" className="h-20 md:h-32 w-auto" />
+            <img src="/logo.png" alt="SehatNxt+" className="h-20 md:h-32 w-auto" />
           </div>
           <p className="text-gray-600 text-sm md:text-base">Complete Clinic Management Platform</p>
         </motion.div>
@@ -196,7 +195,7 @@ export function Onboarding({ onComplete }: OnboardingProps) {
                 transition={{ type: "spring", duration: 0.6 }}
                 className="w-32 h-32 md:w-48 md:h-48 bg-gradient-to-br from-blue-50 to-teal-50 rounded-2xl md:rounded-3xl flex items-center justify-center mx-auto mb-4 md:mb-6 shadow-lg border-2 border-blue-100"
               >
-                <img src={logo} alt="SehatNxt+" className="h-24 md:h-36 w-auto" />
+                <img src="/logo.png" alt="SehatNxt+" className="h-24 md:h-36 w-auto" />
               </motion.div>
               <h2 className="text-gray-900 mb-3 md:mb-4 text-xl md:text-2xl">Welcome to SehatNxt+</h2>
               <p className="text-gray-600 mb-6 md:mb-8 max-w-md mx-auto text-sm md:text-base">

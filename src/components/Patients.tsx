@@ -1,8 +1,7 @@
 import { useState } from 'react';
-import { Search, Eye, Download, Plus, Activity, Upload, FileSpreadsheet, X } from 'lucide-react';
+import { Search, Plus, Eye, Edit, Upload } from 'lucide-react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from './ui/dialog';
 import { VitalsTracking } from './VitalsTracking';
-import logo from 'figma:asset/e69f99b7f89c8400a7a65b1e073263c7642e5570.png';
 import { toast } from 'sonner@2.0.3';
 
 const patientsData = [
@@ -117,9 +116,6 @@ export function Patients({ onNavigate }: PatientsProps) {
             <Plus className="w-4 h-4 md:w-5 md:h-5" strokeWidth={2} />
             <span className="font-medium">Add Patient</span>
           </button>
-          <div className="hidden lg:block">
-            <img src={logo} alt="SehatNxt+" className="h-16 w-auto opacity-50" />
-          </div>
         </div>
       </div>
 

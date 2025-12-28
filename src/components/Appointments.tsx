@@ -1,10 +1,9 @@
 import { useState } from 'react';
-import { Plus, Check, X, Filter } from 'lucide-react';
+import { Calendar, Clock, User, Plus, X, Search, Filter, Edit2, Trash2, CheckCircle2 } from 'lucide-react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogTrigger } from './ui/dialog';
 import { Input } from './ui/input';
 import { Label } from './ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
-import logo from 'figma:asset/e69f99b7f89c8400a7a65b1e073263c7642e5570.png';
 import { toast } from 'sonner@2.0.3';
 
 const appointmentsData = [
@@ -183,7 +182,7 @@ export function Appointments() {
             </DialogContent>
           </Dialog>
           <div className="hidden md:block">
-            <img src={logo} alt="SehatNxt+" className="h-16 w-auto opacity-50" />
+            <img src="/logo.png" alt="SehatNxt+" className="h-16 w-auto opacity-50" />
           </div>
         </div>
       </div>
@@ -251,14 +250,14 @@ export function Appointments() {
                             className="p-1.5 md:p-2 bg-green-50 text-green-600 rounded-lg hover:bg-green-100 transition-colors"
                             title="Mark as Checked"
                           >
-                            <Check className="w-3.5 h-3.5 md:w-4 md:h-4" strokeWidth={2} />
+                            <CheckCircle2 className="w-3.5 h-3.5 md:w-4 md:h-4" strokeWidth={2} />
                           </button>
                           <button
                             onClick={() => handleStatusChange(appointment.id, 'cancelled')}
                             className="p-1.5 md:p-2 bg-red-50 text-red-600 rounded-lg hover:bg-red-100 transition-colors"
                             title="Cancel"
                           >
-                            <X className="w-3.5 h-3.5 md:w-4 md:h-4" strokeWidth={2} />
+                            <Trash2 className="w-3.5 h-3.5 md:w-4 md:h-4" strokeWidth={2} />
                           </button>
                         </>
                       )}

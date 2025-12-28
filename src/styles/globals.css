@@ -4,7 +4,7 @@
 
 :root {
   --font-size: 16px;
-  --background: #ffffff;
+  --background: linear-gradient(135deg, #E3F2FD 0%, #E0F2F1 100%);
   --foreground: oklch(0.145 0 0);
   --card: #ffffff;
   --card-foreground: oklch(0.145 0 0);

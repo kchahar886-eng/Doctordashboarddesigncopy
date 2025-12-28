@@ -3,7 +3,7 @@ import { Bell, Send, Clock, CheckCircle, XCircle, MessageSquare, Phone } from 'l
 import { Button } from './ui/button';
 import { Switch } from './ui/switch';
 import { Label } from './ui/label';
-<img src="/logo.png" alt="SehatNxt Logo" />;
+import logo from 'figma:asset/e69f99b7f89c8400a7a65b1e073263c7642e5570.png';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { toast } from 'sonner@2.0.3';
 
