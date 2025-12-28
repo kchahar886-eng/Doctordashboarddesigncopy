@@ -1,10 +1,9 @@
 import { useState } from 'react';
-import { Bell, Send, Clock, CheckCircle, XCircle, MessageSquare, Phone } from 'lucide-react';
-import { Button } from './ui/button';
+import { Bell, Send, Calendar, Clock, CheckCircle, XCircle, MessageSquare, Phone } from 'lucide-react';
+import { Input } from './ui/input';
 import { Switch } from './ui/switch';
 import { Label } from './ui/label';
-import logo from 'figma:asset/e69f99b7f89c8400a7a65b1e073263c7642e5570.png';
-import { ImageWithFallback } from './figma/ImageWithFallback';
+import { Button } from './ui/button';
 import { toast } from 'sonner@2.0.3';
 
 interface Reminder {
@@ -108,12 +107,9 @@ export function AppointmentReminders() {
     <div className="space-y-6">
       {/* Header */}
       <div className="flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <ImageWithFallback src={logo} alt="SehatNxt+" className="h-10 w-auto" />
-          <div>
-            <h1 className="text-gray-900">Appointment Reminders</h1>
-            <p className="text-sm text-gray-600">Automated SMS & WhatsApp reminders</p>
-          </div>
+        <div>
+          <h1 className="text-gray-900">Appointment Reminders</h1>
+          <p className="text-sm text-gray-600">Automated SMS & WhatsApp reminders</p>
         </div>
         {pendingCount > 0 && (
           <Button onClick={handleSendAll} className="bg-[#1A73E8] hover:bg-[#1557B0]">

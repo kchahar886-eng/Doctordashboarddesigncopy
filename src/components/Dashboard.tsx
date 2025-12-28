@@ -302,8 +302,8 @@ export function Dashboard({ onNavigate }: DashboardProps) {
       {/* Patient Trend Chart */}
       <div className="bg-white rounded-2xl p-4 md:p-6 shadow-sm border border-gray-100">
         <h2 className="text-gray-900 mb-4 text-lg md:text-xl">Daily Patient Trend</h2>
-        <div className="h-64 md:h-80">
-          <ResponsiveContainer width="100%" height="100%">
+        <div className="w-full" style={{ height: '320px' }}>
+          <ResponsiveContainer width="100%" height={320}>
             <LineChart data={chartData}>
               <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
               <XAxis dataKey="day" stroke="#9ca3af" />

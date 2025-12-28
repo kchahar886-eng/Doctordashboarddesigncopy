@@ -1,11 +1,9 @@
 import { useState } from 'react';
-import { UserPlus, Send, Clock, CheckCircle, XCircle, Search, Phone, Mail, MapPin } from 'lucide-react';
+import { Users, UserPlus, Search, FileText, TrendingUp, Calendar, CheckCircle, XCircle, Phone, Send } from 'lucide-react';
 import { Input } from './ui/input';
 import { Label } from './ui/label';
 import { Button } from './ui/button';
 import { Textarea } from './ui/textarea';
-import logo from 'figma:asset/e69f99b7f89c8400a7a65b1e073263c7642e5570.png';
-import { ImageWithFallback } from './figma/ImageWithFallback';
 import { toast } from 'sonner@2.0.3';
 
 interface Referral {
@@ -139,11 +137,11 @@ export function ReferralManagement() {
 
   const getStatusIcon = (status: string) => {
     switch (status) {
-      case 'pending': return <Clock className="w-4 h-4" />;
+      case 'pending': return <Calendar className="w-4 h-4" />;
       case 'accepted': return <CheckCircle className="w-4 h-4" />;
       case 'completed': return <CheckCircle className="w-4 h-4" />;
       case 'declined': return <XCircle className="w-4 h-4" />;
-      default: return <Clock className="w-4 h-4" />;
+      default: return <Calendar className="w-4 h-4" />;
     }
   };
 
@@ -151,12 +149,9 @@ export function ReferralManagement() {
     <div className="space-y-6">
       {/* Header */}
       <div className="flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <ImageWithFallback src={logo} alt="SehatNxt+" className="h-10 w-auto" />
-          <div>
-            <h1 className="text-gray-900">Referral Management</h1>
-            <p className="text-sm text-gray-600">Track and manage specialist referrals</p>
-          </div>
+        <div>
+          <h1 className="text-gray-900">Referral Management</h1>
+          <p className="text-sm text-gray-600">Track and manage specialist referrals</p>
         </div>
         <Button 
           onClick={() => setShowNewReferral(!showNewReferral)} 

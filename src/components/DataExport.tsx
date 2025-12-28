@@ -1,10 +1,8 @@
 import { useState } from 'react';
-import { Download, FileText, Database, Calendar, CheckCircle } from 'lucide-react';
-import { Button } from './ui/button';
+import { Download, Calendar, FileText, Users, DollarSign, CheckCircle } from 'lucide-react';
 import { Checkbox } from './ui/checkbox';
 import { Label } from './ui/label';
-import logo from 'figma:asset/e69f99b7f89c8400a7a65b1e073263c7642e5570.png';
-import { ImageWithFallback } from './figma/ImageWithFallback';
+import { Button } from './ui/button';
 import { toast } from 'sonner@2.0.3';
 
 export function DataExport() {
@@ -40,10 +38,10 @@ export function DataExport() {
   };
 
   const dataTypes = [
-    { id: 'patients', label: 'Patients Database', icon: Database, description: 'All patient records and information' },
+    { id: 'patients', label: 'Patients Database', icon: Users, description: 'All patient records and information' },
     { id: 'appointments', label: 'Appointments', icon: Calendar, description: 'Appointment history and schedules' },
     { id: 'prescriptions', label: 'Prescriptions', icon: FileText, description: 'All prescription records' },
-    { id: 'earnings', label: 'Earnings & Transactions', icon: Download, description: 'Financial records and payments' },
+    { id: 'earnings', label: 'Earnings & Transactions', icon: DollarSign, description: 'Financial records and payments' },
     { id: 'referrals', label: 'Referrals', icon: FileText, description: 'Specialist referral records' },
     { id: 'communications', label: 'Communications', icon: FileText, description: 'Patient and staff messages' }
   ];
@@ -52,15 +50,6 @@ export function DataExport() {
 
   return (
     <div className="space-y-6">
-      {/* Header */}
-      <div className="flex items-center gap-3">
-        <ImageWithFallback src={logo} alt="SehatNxt+" className="h-10 w-auto" />
-        <div>
-          <h1 className="text-gray-900">Data Export & Backup</h1>
-          <p className="text-sm text-gray-600">Download your clinic data for backup or analysis</p>
-        </div>
-      </div>
-
       {/* Export Configuration */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Data Selection */}

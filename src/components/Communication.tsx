@@ -3,7 +3,6 @@ import { MessageCircle, Send, Search, Users, User, Phone, Video, MoreVertical, P
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
 import { toast } from 'sonner@2.0.3';
-import logo from 'figma:asset/e69f99b7f89c8400a7a65b1e073263c7642e5570.png';
 
 interface Message {
   id: number;
@@ -106,9 +105,6 @@ export function Communication() {
         <div>
           <h1 className="text-gray-900 text-2xl md:text-3xl">Communication</h1>
           <p className="text-gray-600 mt-1 text-sm md:text-base">Manage patient and staff communications</p>
-        </div>
-        <div className="hidden md:block">
-          <img src={logo} alt="SehatNxt+" className="h-16 w-auto opacity-50" />
         </div>
       </div>
 

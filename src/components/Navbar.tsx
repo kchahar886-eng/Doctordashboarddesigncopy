@@ -30,7 +30,7 @@ export function Navbar({ onNavigate, onMenuClick }: NavbarProps) {
     setShowDropdown(false);
     toast.success('Logging out...');
     setTimeout(() => {
-      localStorage.removeItem('onboarding_complete');
+      localStorage.clear();
       window.location.reload();
     }, 1000);
   };

@@ -852,14 +852,6 @@
     height: calc(var(--spacing) * 48);
   }
 
-  .h-64 {
-    height: calc(var(--spacing) * 64);
-  }
-
-  .h-80 {
-    height: calc(var(--spacing) * 80);
-  }
-
   .h-\[1\.15rem\] {
     height: 1.15rem;
   }
@@ -1918,10 +1910,6 @@
 
   .text-right {
     text-align: right;
-  }
-
-  .align-middle {
-    vertical-align: middle;
   }
 
   .text-2xl {
@@ -3142,12 +3130,6 @@
   @media (width >= 48rem) {
     .md\:h-72 {
       height: calc(var(--spacing) * 72);
-    }
-  }
-
-  @media (width >= 48rem) {
-    .md\:h-80 {
-      height: calc(var(--spacing) * 80);
     }
   }
 

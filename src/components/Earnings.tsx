@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { BarChart, Bar, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts';
 import { Download, TrendingUp, Users, DollarSign, Activity } from 'lucide-react';
-import logo from 'figma:asset/e69f99b7f89c8400a7a65b1e073263c7642e5570.png';
 import { toast } from 'sonner@2.0.3';
 
 const monthlyData = [
@@ -51,9 +50,6 @@ export function Earnings() {
             <Download className="w-4 h-4 md:w-5 md:h-5" strokeWidth={2} />
             <span className="font-medium">Export Report</span>
           </button>
-          <div className="hidden lg:block">
-            <img src={logo} alt="SehatNxt+" className="h-16 w-auto opacity-50" />
-          </div>
         </div>
       </div>
 
@@ -133,8 +129,8 @@ export function Earnings() {
           </div>
         </div>
 
-        <div className="h-80 mb-6">
-          <ResponsiveContainer width="100%" height="100%">
+        <div className="w-full" style={{ height: '320px' }}>
+          <ResponsiveContainer width="100%" height={320}>
             <BarChart data={monthlyData}>
               <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
               <XAxis dataKey="month" stroke="#9ca3af" />
@@ -153,8 +149,8 @@ export function Earnings() {
           </ResponsiveContainer>
         </div>
 
-        <div className="h-80">
-          <ResponsiveContainer width="100%" height="100%">
+        <div className="w-full" style={{ height: '320px' }}>
+          <ResponsiveContainer width="100%" height={320}>
             <LineChart data={monthlyData}>
               <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
               <XAxis dataKey="month" stroke="#9ca3af" />

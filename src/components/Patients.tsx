@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Search, Plus, Eye, Edit, Upload } from 'lucide-react';
+import { Search, Plus, Eye, Edit, Upload, Download, Activity, X, FileSpreadsheet } from 'lucide-react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from './ui/dialog';
 import { VitalsTracking } from './VitalsTracking';
 import { toast } from 'sonner@2.0.3';

@@ -1,5 +1,4 @@
 import { DataExport } from './DataExport';
-import logo from 'figma:asset/e69f99b7f89c8400a7a65b1e073263c7642e5570.png';
 
 export function DataExportPage() {
   return (
@@ -9,9 +8,6 @@ export function DataExportPage() {
         <div>
           <h1 className="text-gray-900 text-2xl md:text-3xl">Data Export</h1>
           <p className="text-gray-600 mt-1 text-sm md:text-base">Export your clinic data for backup or analysis</p>
-        </div>
-        <div className="hidden lg:block">
-          <img src={logo} alt="SehatNxt+" className="h-16 w-auto opacity-50" />
         </div>
       </div>
 

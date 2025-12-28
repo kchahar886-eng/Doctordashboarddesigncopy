@@ -1,6 +1,5 @@
 import { Star, TrendingUp, Users, ThumbsUp, MessageSquare, Award, Calendar } from 'lucide-react';
 import { LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
-import logo from 'figma:asset/e69f99b7f89c8400a7a65b1e073263c7642e5570.png';
 
 const ratingTrend = [
   { month: 'Jun', rating: 4.2 },
@@ -68,9 +67,6 @@ export function Reputation() {
         <div>
           <h1 className="text-gray-900 text-2xl md:text-3xl">Doctor Reputation</h1>
           <p className="text-gray-600 mt-1 text-sm md:text-base">Your ratings, reviews & achievements</p>
-        </div>
-        <div className="hidden md:block">
-          <img src={logo} alt="SehatNxt+" className="h-16 w-auto opacity-50" />
         </div>
       </div>
 
@@ -170,60 +166,64 @@ export function Reputation() {
         {/* Rating Trend */}
         <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
           <h2 className="text-gray-900 mb-4">Rating Trend (6 Months)</h2>
-          <ResponsiveContainer width="100%" height={300}>
-            <LineChart data={ratingTrend}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
-              <XAxis dataKey="month" stroke="#9ca3af" />
-              <YAxis domain={[4.0, 5.0]} stroke="#9ca3af" />
-              <Tooltip 
-                contentStyle={{ 
-                  backgroundColor: '#fff', 
-                  border: '1px solid #e5e7eb', 
-                  borderRadius: '12px',
-                  padding: '12px'
-                }}
-              />
-              <Line 
-                type="monotone" 
-                dataKey="rating" 
-                stroke="#1A73E8" 
-                strokeWidth={3}
-                dot={{ fill: '#1A73E8', r: 5 }}
-                activeDot={{ r: 7 }}
-              />
-            </LineChart>
-          </ResponsiveContainer>
+          <div className="w-full" style={{ height: '300px' }}>
+            <ResponsiveContainer width="100%" height={300}>
+              <LineChart data={ratingTrend}>
+                <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
+                <XAxis dataKey="month" stroke="#9ca3af" />
+                <YAxis domain={[4.0, 5.0]} stroke="#9ca3af" />
+                <Tooltip 
+                  contentStyle={{ 
+                    backgroundColor: '#fff', 
+                    border: '1px solid #e5e7eb', 
+                    borderRadius: '12px',
+                    padding: '12px'
+                  }}
+                />
+                <Line 
+                  type="monotone" 
+                  dataKey="rating" 
+                  stroke="#1A73E8" 
+                  strokeWidth={3}
+                  dot={{ fill: '#1A73E8', r: 5 }}
+                  activeDot={{ r: 7 }}
+                />
+              </LineChart>
+            </ResponsiveContainer>
+          </div>
         </div>
 
         {/* Review Distribution */}
         <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
           <h2 className="text-gray-900 mb-4">Review Distribution</h2>
-          <ResponsiveContainer width="100%" height={300}>
-            <PieChart>
-              <Pie
-                data={reviewsData}
-                cx="50%"
-                cy="50%"
-                innerRadius={60}
-                outerRadius={100}
-                paddingAngle={5}
-                dataKey="count"
-                label={({ category, count }) => `${category}: ${count}`}
-              >
-                {reviewsData.map((entry, index) => (
-                  <Cell key={`cell-${index}`} fill={entry.color} />
-                ))}
-              </Pie>
-              <Tooltip 
-                contentStyle={{ 
-                  backgroundColor: '#fff', 
-                  border: '1px solid #e5e7eb', 
-                  borderRadius: '12px',
-                  padding: '12px'
-                }}
-              />
-            </PieChart>
-          </ResponsiveContainer>
+          <div className="w-full" style={{ height: '300px' }}>
+            <ResponsiveContainer width="100%" height={300}>
+              <PieChart>
+                <Pie
+                  data={reviewsData}
+                  cx="50%"
+                  cy="50%"
+                  innerRadius={60}
+                  outerRadius={100}
+                  paddingAngle={5}
+                  dataKey="count"
+                  label={({ category, count }) => `${category}: ${count}`}
+                >
+                  {reviewsData.map((entry, index) => (
+                    <Cell key={`cell-${index}`} fill={entry.color} />
+                  ))}
+                </Pie>
+                <Tooltip 
+                  contentStyle={{ 
+                    backgroundColor: '#fff', 
+                    border: '1px solid #e5e7eb', 
+                    borderRadius: '12px',
+                    padding: '12px'
+                  }}
+                />
+              </PieChart>
+            </ResponsiveContainer>
+          </div>
         </div>
       </div>
 

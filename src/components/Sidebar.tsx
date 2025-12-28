@@ -27,7 +27,7 @@ export function Sidebar({ currentPage, onNavigate, isMobile = false, isOpen = fa
   const handleLogout = () => {
     toast.success('Logging out...');
     setTimeout(() => {
-      localStorage.removeItem('onboarding_complete');
+      localStorage.clear();
       window.location.reload();
     }, 1000);
   };

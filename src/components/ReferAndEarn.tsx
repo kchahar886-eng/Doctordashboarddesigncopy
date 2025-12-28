@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { Gift, Copy, Share2 } from 'lucide-react';
 import { toast } from 'sonner@2.0.3';
-import logo from 'figma:asset/e69f99b7f89c8400a7a65b1e073263c7642e5570.png';
 
 export function ReferAndEarn() {
   const [referralCode] = useState('SHARMA2025');
@@ -31,9 +30,6 @@ export function ReferAndEarn() {
         <div>
           <h1 className="text-gray-900 text-2xl md:text-3xl">Refer & Earn</h1>
           <p className="text-gray-600 mt-1 text-sm md:text-base">Share your referral code and earn rewards</p>
-        </div>
-        <div className="hidden lg:block">
-          <img src={logo} alt="SehatNxt+" className="h-16 w-auto opacity-50" />
         </div>
       </div>
 
