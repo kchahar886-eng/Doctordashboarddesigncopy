@@ -1,6 +1,6 @@
 import { Calendar, Users, Clock, DollarSign, Plus, FileText, AlertTriangle, Wind, Activity, TrendingUp } from 'lucide-react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-<img src="/logo.png" alt="SehatNxt Logo" />
+<img src="/logo.png" alt="SehatNxt Logo" />;
 import { toast } from 'sonner@2.0.3';
 import { useState, useEffect } from 'react';
 
