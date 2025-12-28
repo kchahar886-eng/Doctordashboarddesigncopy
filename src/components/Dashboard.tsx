@@ -1,6 +1,6 @@
 import { Calendar, Users, Clock, DollarSign, Plus, FileText, AlertTriangle, Wind, Activity, TrendingUp } from 'lucide-react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import logo from 'figma:asset/e69f99b7f89c8400a7a65b1e073263c7642e5570.png';
+import logo from 'public/logo.png';
 import { toast } from 'sonner@2.0.3';
 import { useState, useEffect } from 'react';
 
