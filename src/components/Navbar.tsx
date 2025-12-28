@@ -1,6 +1,6 @@
 import { Search, Bell, ChevronDown, Menu } from 'lucide-react';
 import { useState } from 'react';
-import logo from 'figma:asset/e69f99b7f89c8400a7a65b1e073263c7642e5570.png';
+<img src="/logo.png" alt="SehatNxt+" className="h-10 w-auto" />
 import { toast } from 'sonner@2.0.3';
 
 interface NavbarProps {
