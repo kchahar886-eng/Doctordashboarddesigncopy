@@ -1,6 +1,6 @@
 import { Search, Bell, ChevronDown, Menu } from 'lucide-react';
 import { useState } from 'react';
-<img src="/logo.png" alt="SehatNxt+" className="h-10 w-auto" />
+<img src="/logo.png" alt="SehatNxt Logo" />
 import { toast } from 'sonner@2.0.3';
 
 interface NavbarProps {
